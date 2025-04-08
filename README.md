@@ -130,7 +130,7 @@ The blockchain explorer frontend is built in Next.js. To integrate it with the b
 2. Connect to the JSON-RPC API for Ethereum-compatible data
 3. Configure the explorer to display the correct token denomination (tUCC/UCC)
 
-## Roadmap and Next Steps
+<!-- ## Roadmap and Next Steps
 
 - **Mainnet Launch**: Deploy Universe Chain mainnet with UCC denomination
 - **Multi-validator Setup**: Expand the validator set for better decentralization
@@ -140,4 +140,4 @@ The blockchain explorer frontend is built in Next.js. To integrate it with the b
 
 ## Contributing
 
-Contributions to Universe Chain are welcome! Please refer to the general [Contributing](./CONTRIBUTING.md) guidelines and feel free to open issues or submit pull requests.
+Contributions to Universe Chain are welcome! Please refer to the general [Contributing](./CONTRIBUTING.md) guidelines and feel free to open issues or submit pull requests. -->
