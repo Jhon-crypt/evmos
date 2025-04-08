@@ -99,7 +99,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id
 - **Endpoint**: `http://localhost:1317`
 - **Swagger Documentation**: `http://localhost:1317/swagger/`
 
-Example:
+Example
 ```bash
 # Query account balance
 curl -X GET "http://localhost:1317/cosmos/bank/v1beta1/balances/{address}" -H "accept: application/json"
