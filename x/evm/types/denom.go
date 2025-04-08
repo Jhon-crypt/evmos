@@ -90,4 +90,14 @@ var ChainsCoinInfo = map[string]EvmCoinInfo{
 		DisplayDenom: "atom",
 		Decimals:     SixDecimals,
 	},
+	"universe_9000": {
+		Denom:        "atucc",
+		DisplayDenom: "tucc",
+		Decimals:     EighteenDecimals,
+	},
+	"universe_1": {
+		Denom:        "aucc",
+		DisplayDenom: "ucc",
+		Decimals:     EighteenDecimals,
+	},
 }

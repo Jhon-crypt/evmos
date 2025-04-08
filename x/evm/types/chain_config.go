@@ -19,7 +19,7 @@ import (
 )
 
 // testChainID represents the ChainID used for the purpose of testing.
-const testChainID string = "evmos_9002-1"
+const testChainID string = "universe_9000-1"
 
 // chainConfig is the chain configuration used in the EVM to defined which
 // opcodes are active based on Ethereum upgrades.
@@ -32,6 +32,13 @@ func (cc ChainConfig) EthereumConfig(chainID *big.Int) *geth.ChainConfig {
 	if chainID != nil {
 		cID = chainID
 	}
+	
+	// Configure PoA consensus with Clique
+	clique := &geth.CliqueConfig{
+		Period: 15, // 15 second blocks
+		Epoch:  30000,
+	}
+	
 	return &geth.ChainConfig{
 		ChainID:                 cID,
 		HomesteadBlock:          getBlockValue(cc.HomesteadBlock),
@@ -55,7 +62,7 @@ func (cc ChainConfig) EthereumConfig(chainID *big.Int) *geth.ChainConfig {
 		CancunBlock:             getBlockValue(cc.CancunBlock),
 		TerminalTotalDifficulty: nil,
 		Ethash:                  nil,
-		Clique:                  nil,
+		Clique:                  clique, // Enable PoA with Clique
 	}
 }
 

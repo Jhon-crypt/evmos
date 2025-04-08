@@ -34,6 +34,10 @@ const (
 	SixDecChainID = "evmosix_9000"
 	// ICSChainID defines the Evmos EIP155 chain ID with IBC uatom as denom with 6 decimals precision
 	ICSChainID = "evmosics_9000"
+	// UniverseTestnetChainID defines the Universe Chain EIP155 chain ID for testnet
+	UniverseTestnetChainID = "universe_9000-1"
+	// UniverseMainnetChainID defines the Universe Chain EIP155 chain ID for mainnet
+	UniverseMainnetChainID = "universe_1-1"
 )
 
 // EthHexToCosmosAddr takes a given Hex string and derives a Cosmos SDK account address

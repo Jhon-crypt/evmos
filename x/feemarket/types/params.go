@@ -15,8 +15,8 @@ var (
 	DefaultBaseFee = math.LegacyNewDec(1_000_000_000)
 	// DefaultMinGasMultiplier is 0.5 or 50%
 	DefaultMinGasMultiplier = math.LegacyNewDecWithPrec(50, 2)
-	// DefaultMinGasPrice is 0 (i.e disabled)
-	DefaultMinGasPrice = math.LegacyZeroDec()
+	// DefaultMinGasPrice is set to 0.00001 UCC (10^13 aUCC)
+	DefaultMinGasPrice = math.LegacyNewDec(10_000_000_000_000)
 	// DefaultEnableHeight is 0 (i.e disabled)
 	DefaultEnableHeight = int64(0)
 	// DefaultNoBaseFee is false

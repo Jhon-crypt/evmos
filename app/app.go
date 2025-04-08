@@ -168,7 +168,7 @@ import (
 
 func init() {
 	var err error
-	DefaultNodeHome, err = clienthelpers.GetNodeHomeDirectory(".evmosd")
+	DefaultNodeHome, err = clienthelpers.GetNodeHomeDirectory(".universed")
 	if err != nil {
 		panic(err)
 	}
@@ -180,10 +180,12 @@ func init() {
 	feemarkettypes.DefaultMinGasMultiplier = MainnetMinGasMultiplier
 	// modify default min commission to 5%
 	stakingtypes.DefaultMinCommissionRate = math.LegacyNewDecWithPrec(5, 2)
+	// Set total supply to 18000000 UCC
+	evmostypes.TotalSupply = 18000000
 }
 
 // Name defines the application binary name
-const Name = "evmosd"
+const Name = "universed"
 
 var (
 	// DefaultNodeHome default home directories for the application daemon

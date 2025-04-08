@@ -94,7 +94,7 @@ func InitCmd(mbm module.BasicManager, defaultNodeHome string) *cobra.Command {
 			case clientCtx.ChainID != "":
 				chainID = clientCtx.ChainID
 			default:
-				chainID = fmt.Sprintf("evmos_9000-%v", cmtrand.Str(6))
+				chainID = fmt.Sprintf("universe_9000-%v", cmtrand.Str(6))
 			}
 
 			// Get bip39 mnemonic
@@ -181,6 +181,7 @@ func InitCmd(mbm module.BasicManager, defaultNodeHome string) *cobra.Command {
 	cmd.Flags().Bool(genutilcli.FlagRecover, false, "provide seed phrase to recover existing key instead of creating")
 	cmd.Flags().String(flags.FlagChainID, "", "genesis file chain-id, if left blank will be randomly created")
 	cmd.Flags().String(genutilcli.FlagDefaultBondDenom, evmostypes.BaseDenom, "defines the default denom to use in genesis file")
+	cmd.Flags().Int64(flags.FlagInitHeight, 1, "initial height of the chain")
 
 	return cmd
 }
